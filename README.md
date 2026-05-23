@@ -10,6 +10,12 @@ It includes:
 
 The goal is to make project setup, modeling, validation, and governance more consistent and easier to scale across use cases.
 
+## Start Here (Beginner)
+
+If you are new to this repository, begin with the repo-wide onboarding guide:
+
+- [BEGINNER_PLAYBOOK.md](BEGINNER_PLAYBOOK.md)
+
 ## What You Will Find
 
 ### Top-level assets
