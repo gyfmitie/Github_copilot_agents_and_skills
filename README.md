@@ -51,6 +51,6 @@ Use this repository as a reference and starting point to:
 
 ## License
 
-This repository is licensed under the Apache License 2.0.
+This repository is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 See [LICENSE](LICENSE) for the full text.
