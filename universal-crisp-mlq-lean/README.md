@@ -1,0 +1,116 @@
+# Universal CRISP-ML(Q) Copilot Pack - Lean Variant
+
+This folder is a reusable starter pack for applying CRISP-ML(Q) across different ML projects with a fast-prototyping focus.
+
+## What is included
+
+- `instructions/crisp-mlq-core.instructions.md`
+  - Always-on project-level policy and quality gates.
+- `agents/crisp-mlq-architect.agent.md`
+  - Designs implementation options and plans per CRISP-ML(Q) phase.
+- `agents/crisp-mlq-auditor.agent.md`
+  - Reviews artifacts and decisions against quality criteria.
+- `skills/problem-framing/SKILL.md`
+- `skills/data-readiness/SKILL.md`
+- `skills/preprocessing-feature-pipeline/SKILL.md`
+- `skills/modeling-baseline/SKILL.md`
+- `skills/validation-uncertainty/SKILL.md`
+- `skills/deployment-monitoring/SKILL.md`
+- `skills/fairness-risk-governance/SKILL.md`
+
+Optional project-type add-on presets:
+
+- `skills/preset-forecasting/SKILL.md`
+- `skills/preset-classification/SKILL.md`
+- `skills/preset-anomaly-detection/SKILL.md`
+
+## Universal-by-default design
+
+Each file contains sections labeled:
+
+- `Universal default`
+- `Project adaptation notes`
+
+Use these notes to decide what to keep, edit, or remove for each project.
+
+Default profile in this draft:
+
+- Scope: Python scripts, notebooks, and common ML support files
+- Governance: lean-balanced (core quality checks preserved, heavy governance optional)
+- Agent style: plain language, medium structure, short examples, and concise execution steps
+- Speed target: move from framing to first validated baseline quickly
+
+## How to use in a new project
+
+1. Bootstrap your Python environment before writing or running project code:
+   - Windows (PowerShell)
+     - `python -m venv .venv`
+     - `.\.venv\Scripts\Activate.ps1`
+   - macOS/Linux
+     - `python3 -m venv .venv`
+     - `source .venv/bin/activate`
+   - Then initialize dependencies and lock them:
+     - `python -m pip install --upgrade pip`
+     - Install your initial packages
+     - `pip freeze > requirements.txt`
+2. Initialize version control before feature work:
+  - `git init`
+  - `git checkout -b chore/project-bootstrap`
+  - Make an initial commit for environment and starter scaffolding
+3. Copy this entire folder into your project under `.Copilot/`.
+4. Start by editing:
+   - `instructions/crisp-mlq-core.instructions.md`
+5. Update `applyTo` patterns for your stack:
+   - Python only: `"**/*.py"`
+   - Notebooks: `"**/*.{py,ipynb}"`
+   - Polyglot projects: broaden patterns as needed.
+6. Remove skills that do not apply:
+   - Example: remove fairness skill for purely internal, non-human-impact optimization if your governance permits that.
+7. Add project-specific skills when needed:
+   - Example: geospatial QA, sensor fault diagnostics, LLM eval.
+8. Activate one optional project-type preset when applicable:
+   - Forecasting projects: `preset-forecasting`
+   - Classification projects: `preset-classification`
+   - Anomaly detection projects: `preset-anomaly-detection`
+9. Add `preprocessing-feature-pipeline` when your prototype needs explicit transform rules and train/inference parity checks.
+
+## Suggested minimum adaptation checklist
+
+- Virtual environment created and activated.
+- Python version documented.
+- Dependency manifest created and updated.
+- Git repository initialized.
+- Branch strategy documented.
+- Initial bootstrap commit created.
+- Problem statement, target variable, and decision impact are explicit.
+- Data contracts and leakage boundaries are defined.
+- Baseline model and acceptance threshold are defined.
+- Time-aware and regime-aware validation are defined.
+- Uncertainty output and low-confidence fallback are defined.
+- Deployment monitoring and retraining triggers are defined.
+- Compliance or governance constraints are documented.
+
+## Git workflow quick prompts
+
+- "Create a branch named feat/<topic>, make the requested changes, and commit them in small logical commits. Do not push."
+- "Prepare a safe merge plan for branch feat/<topic> into main and stop before merging."
+- "Merge branch feat/<topic> into main with a merge commit, resolve conflicts conservatively, and summarize the result."
+- "Rebase branch feat/<topic> onto main, then fast-forward merge if possible. Stop and ask if conflicts appear."
+- "Show the current branch, recent commits, and the cleanest next Git step for this work."
+
+## Lean defaults in this variant
+
+- Keep only essential artifacts during prototyping: framing note, data readiness summary, baseline report, validation summary.
+- Treat deployment and formal governance sections as optional until the project is approved for production.
+- Prefer one primary metric and up to two secondary checks to reduce analysis overhead.
+- Use short, decision-focused outputs.
+
+## Optional cleanup for narrow projects
+
+You can simplify by removing:
+
+- Agent files if you only use direct chat + instructions/skills.
+- Fairness/governance skill if project scope and policy truly do not require it.
+- Deployment skill for one-off exploratory analysis.
+
+Keep at least the core instruction and validation skill for quality control.
