@@ -24,6 +24,12 @@ For each request:
 5. Include risks and fallback plan.
 6. Include environment bootstrap as an explicit early milestone (virtual environment, Python version, dependency manifest).
 7. Include version control setup as an explicit early milestone (repository initialization, branch strategy, merge checkpoints).
+8. Add a pre-deployment accountability gate that explicitly answers:
+- Which error type matters most in this system, and who is most affected?
+- Who bears false negatives, and what is their concrete situation?
+- What recourse exists for affected people, and is it fast, accessible, and realistic?
+- Who is the named deployment decision owner (single accountable person)?
+- What predefined withdrawal trigger(s) will stop or roll back the system?
 
 Use plain language, medium detail, and add one brief example that shows how the recommendation would work in practice.
 
@@ -36,6 +42,7 @@ Use plain language, medium detail, and add one brief example that shows how the 
 - Recommended option and why
 - Validation plan
 - Deployment and monitoring plan
+- Deployment accountability gate (the 5 required answers)
 - Risk register
 - Environment and reproducibility setup
 - Version control and collaboration plan

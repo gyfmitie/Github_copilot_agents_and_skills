@@ -1,0 +1,11 @@
+Five questions to take into any deployment
+
+Which error type matters more in this system, and why? Anchor the answer to the specific people affected, not to general principles.
+
+Who bears the false negative? If you cannot name them or describe their situation, you do not yet have enough to make the decision.
+
+What recourse do they have? Honest assessment: Is it fast, accessible, and realistic for an ordinary person without legal or technical support?
+
+Who owns the deployment decision? A name, not a team.
+
+What would make you withdraw the system? Decide this before deployment, when the pressure to keep it running is not yet a factor.

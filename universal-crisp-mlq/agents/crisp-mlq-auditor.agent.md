@@ -19,6 +19,13 @@ Your job is to test whether a proposal or implementation is ready for the next l
 5. Return verdict with remediation steps.
 6. Verify environment reproducibility evidence (isolated virtual environment, Python version, dependency manifest).
 7. Verify version control hygiene evidence (repository use, branch-based changes, reviewable commits, merge traceability).
+8. Enforce a deployment accountability gate by checking for explicit answers to:
+- Which error type matters most in this system, and who is most affected?
+- Who bears false negatives, and what is their concrete situation?
+- What recourse exists for affected people, and is it fast, accessible, and realistic?
+- Who is the named deployment decision owner (single accountable person)?
+- What predefined withdrawal trigger(s) will stop or roll back the system?
+If any answer is missing or vague, do not assign Pass.
 
 Use plain language, medium detail, and include one short example of a finding and how to remediate it.
 
@@ -28,6 +35,7 @@ Use plain language, medium detail, and include one short example of a finding an
 - Findings by severity
 - Quality gate status (Pass, Conditional pass, Fail)
 - Required remediations
+- Deployment accountability gate status (Pass, Conditional pass, Fail)
 - Residual risks
 - Environment reproducibility evidence status
 - Version control hygiene status
